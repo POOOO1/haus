@@ -16,46 +16,47 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-
     TextView textView;
     Button but1;
     Button but2;
     Button but3;
 
 
-
     @Override
-    protected void OnCreate(BundleSavedInstance){
-        super.OnCreate(savedInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView = (TextView) findViewById(R.id.textView);
-        But1 = (Button) findViewById(R.id.but1);
-        But2 = (Button) findViewById(R.id.but2);
-        But3 = (Button) findViewById(R.id.but2);
+        TextView textView = (TextView) findViewById(R.id.textView2);
+        Button but1 = (Button) findViewById(R.id.but1);
+        Button but2 = (Button) findViewById(R.id.but2);
+        Button but3 = (Button) findViewById(R.id.but2);
 
 
-        But1.setOnClickListener (new View.OnClickListener(){
+//        but1.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//                textView.setText("Нажата кнопка 1");
+//            }
+//
+//        });
 
-                @Override
-                public void OnClick(View view){
-                    textView.setText("Нажата кнопка 1");
-                }
-
-        });
-
-        But2.setOnClickListener(this);
+        but2.setOnClickListener(this);
     }
 
-    public void clickBut3(View view){
-       textView.setText(" Нажата кнопка 3");
+    public void clickBut3(View view) {
+        textView.setText(" Нажата кнопка 3");
 
     }
 
-@Override
-    public void OnClick(View view){
+    @Override
+    public void onClick(View view) {
         textView.setText("Нажата кнопка 2");
-}
+    }
 
 }
+
+
+
 
